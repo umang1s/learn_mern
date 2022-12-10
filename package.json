@@ -9,13 +9,13 @@
     "uuid": "^9.0.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "name": "demo",
   "version": "1.0.0",
   "description": "A note taking app",
-  "main": "server.js",
+  "main": "index.js",
   "devDependencies": {
     "nodemon": "^2.0.20"
   },
