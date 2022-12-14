@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require("express");
 const app=express();
 const path=require("path")
@@ -8,11 +10,12 @@ const cors=require('cors')
 const corsOptions=require("./config/corsOptions")
 const PORT= process.env.PORT || 8090;
 
+console.log(process.env.NODE_ENV)
 app.use(logger);
 app.use(coockieParser())
 app.use(express.json())
 app.use(cors(corsOptions)) //use for giving access to public api
-
+ 
 app.use('/',express.static(path.join(__dirname,'./public')));
 app.use('/',require("./routes/root"))
 
